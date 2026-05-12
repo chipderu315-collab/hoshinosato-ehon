@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ほしのさと えほんライブラリー</title>
+    <style>
+        :root {
+            /* リリアーネの世界をイメージした配色 */
+            --liliane-pink: #ffb7c5;    /* 幸せな笑い声のピンク */
+            --forest-green: #eafaea;   /* 癒やしのグリーン（背景） */
+            --natural-green: #7fb07f;  /* 植物の優しい緑（アクセント） */
+            --wood-brown: #8d6e63;     /* 本棚の木の色 */
+            --font-family: 'Hiragino Maru Gothic ProN', 'Meiryo', sans-serif;
+        }
+
+        body {
+            background-color: var(--forest-green);
+            background-image: 
+                radial-gradient(var(--liliane-pink) 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            color: #444;
+            font-family: var(--font-family);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .ehon-index {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .index-header {
+            margin-bottom: 50px;
+        }
+
+        .welcome-badge {
+            display: inline-block;
+            background: #fff;
+            padding: 5px 20px;
+            border-radius: 50px;
+            border: 2px solid var(--liliane-pink);
+            font-size: 16px;
+            font-weight: bold;
+            color: #d88a8a;
+            margin-bottom: 15px;
+        }
+
+        .soft-title {
+            font-size: 28px;
+            color: var(--natural-green);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .book-shelf-container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 30px 15px;
+            border-radius: 30px;
+            border: 2px dashed var(--natural-green);
+        }
+
+        .shelf-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .book-item {
+            text-decoration: none;
+            width: 30%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .book-item:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .book-cover {
+            background: #fff;
+            border-radius: 5px 15px 15px 5px;
+            box-shadow: 5px 8px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 8px solid var(--liliane-pink);
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .book-title {
+            padding: 10px 5px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .shelf-board {
+            height: 15px;
+            background: var(--wood-brown);
+            border-radius: 10px;
+        }
+
+        /* 固定ボタン共通デザイン */
+        .fixed-nav {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 85px;
+            height: 85px;
+            background: #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .fixed-nav:hover {
+            transform: scale(1.1);
+        }
+
+        /* 新しい：絵本ページに戻るボタン（左下） */
+        .back-to-ehon {
+            left: 20px;
+            bottom: 30px;
+            border: 4px double var(--natural-green);
+            color: var(--natural-green);
+        }
+
+        /* トップに戻るボタン（右下） */
+        .back-to-top {
+            right: 20px;
+            bottom: 30px;
+            border: 4px double var(--liliane-pink);
+            color: #d88a8a;
+        }
+    </style>
+</head>
+<body>
+
+<main class="ehon-index">
+    <header class="index-header">
+        <div class="welcome-badge">🌷 Welcome 🌷</div>
+        <h1 class="soft-title">ほしのさと 制作<br>えほんコーナー</h1>
+
+    </header>
+
+    <div class="book-shelf-container">
+        <div class="shelf-row">
+            <a href="ehon2.html" class="book-item">
+                <div class="book-cover">
+                    <img src="2.jpg" alt="こどもせいしょものがたり">
+                    <div class="book-title">こどもせいしょ<br>ものがたり</div>
+                </div>
+            </a>
+            <a href="osigoto.html" class="book-item">
+                <div class="book-cover">
+                    <img src="ehonn/daiku3.jpg" alt="おそらのうえのだいくさん">
+                    <div class="book-title">おそらのうえの<br>だいくさん</div>
+                </div>
+            </a>
+            <a href="otehon.html" class="book-item">
+                <div class="book-cover">
+                    <img src="ehonn/otehon1.jpg" alt="お手本であるイエスさま">
+                    <div class="book-title">お手本である<br>イエスさま</div>
+                </div>
+            </a>
+        </div>
+        <div class="shelf-board"></div>
+    </div>
+
+    <footer style="margin-top: 60px; color: #888;">
+        <div style="font-size: 24px;">🐾 🐦 🦋</div>
+        <p>ぶん・え：ほしのさと
+    </footer>
+</main>
+
+
+<!-- 「おうちに帰る」ボタン -->
+<a href="index.html" class="fixed-nav back-to-top">
+    <span style="font-size: 24px;">🏡</span>
+    <span>おうちに帰る</span>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ほしのさと せいしょものがたり</title>
+    <link rel="stylesheet" href="ehon.css">
+    <style>
+        /* 全体設定：ホスピタリティを意識した余白 */
+        body { margin: 0; padding: 0; background-color: #fdfbf7; }
+        .ehon-viewer { max-width: 800px; margin: 0 auto; padding-bottom: 120px; }
+        
+        /* ページ制御（最初は非表示、activeのみ表示） */
+        .page { display: none; padding: 20px; }
+        .page.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .image-area img { width: 100%; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .text-area { padding: 20px; text-align: center; font-family: 'Hiragino Maru Gothic ProN', sans-serif; }
+        .storybook-text { line-height: 1.8; font-size: 1.1rem; color: #555; }
+        
+        /* 下部ナビゲーション */
+        .controls {
+            display: flex; align-items: center; justify-content: center;
+            gap: 15px; margin: 40px 0 120px 0;
+        }
+        .btn-leaf {
+            min-width: 90px; padding: 12px; cursor: pointer;
+            background: #fff; border: 2px solid #7fb07f; border-radius: 25px;
+            color: #7fb07f; font-weight: bold; transition: 0.3s;
+        }
+        .btn-leaf.next { background: #7fb07f; color: #fff; }
+
+        /* 固定魔法ボタン */
+        .magic-nav {
+            position: fixed; bottom: 30px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; width: 75px; height: 75px;
+            background: #fff; border-radius: 50%; text-decoration: none;
+            font-weight: bold; font-size: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            z-index: 9999; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .nav-left { left: 20px; border: 4px double #7fb07f; color: #7fb07f; }
+        .nav-right { right: 20px; border: 4px double #ffb7c5; color: #d88a8a; }
+        .magic-nav:active { transform: scale(0.9); }
+
+        @media screen and (max-width: 480px) {
+            .magic-nav { width: 68px; height: 68px; bottom: 25px; }
+            .controls { margin-bottom: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="ehon-viewer">
+    <!-- 表紙 -->
+    <section class="page active">
+        <div class="image-area"><img src="ehonn/otehon1.jpg" alt="表紙"></div>
+        <div class="text-area">
+            <h1 class="storybook-title">お手本であるイエスさま</h1>
+            <p class="storybook-text">イエスさまは、わたしたちの<br>「さいこうの お手本」です。<br><br>イエスさまが どんなふうに<br>まわりを 愛して、<br>どんなふうに 毎日を<br>すごしていたのか。<br><br>その 優しさを 見つけに<br>いっしょに ページを<br>めくってみましょう。</p>
+        </div>
+    </section>
+
+    <!-- 第1ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon2.jpg" alt="第1ページ"></div>
+        <div class="text-area">
+            <h2>神さまの子どもになる</h2>
+            <p class="storybook-text">イエスさまは「みんなの<br>お手本に なるために」と<br>洗礼を受けられました。 水から上がると、天から<br>神さまの声が 聞こえました。<br><br>「これは わたしの 愛する子。<br>わたしの 心に かなう者である」<br><br>洗礼を 受けると、あなたも<br>「神さまの 愛する子ども」という<br>とくべつな 身分に かわります。<br><br>『これは わたしの 愛する子、<br>わたしの 心に かなう者である。』<br>（マタイ 3:17）</p>
+        </div>
+    </section>
+
+    <!-- 第2ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon3.jpg" alt="第2ページ"></div>
+        <div class="text-area">
+            <h2>本当のことを見分ける</h2>
+            <p class="storybook-text">お腹が ぺこぺこの とき、<br>悪魔が やってきて<br>「うそ」を たくさん 言って<br>イエスさまを 惑わせました。<br><br>でも イエスさまは、神さまの<br>「本当のこと」を 語って、<br>うそを はねのけました。<br><br>聖書のことばは、うそを<br>見分ける 強い 力に なるよ。<br><br>『人は パンだけで<br>生きるものではない。<br>神の口から 出る 一つ一つの<br>言葉で 生きる。』<br>（マタイ 4:4）</p>
+        </div>
+    </section>
+
+    <!-- 第3ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon4.jpg" alt="第3ページ"></div>
+        <div class="text-area">
+            <h2>ひとりで祈る</h2>
+            <p class="storybook-text">まだ 暗い 朝早く、<br>イエスさまは 静かな 場所へ<br>行き、お空の 神さまと<br>お話しを しました。<br><br>神さまと 過ごす 時間は、<br>イエスさまにとって<br>一番 大切な 元気の 源でした。<br><br>うれしい 時も、悲しい 時も、<br>イエスさまみたいに<br>神さまに お話ししてみてね。<br><br>『朝早く まだ 暗いうちに、<br>イエスは 起きて<br>人里離れた 所へ 出て行き、<br>そこで 祈っておられた。』<br>（マルコ 1:35）</p>
+        </div>
+    </section>
+
+    <!-- 第4ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon5.jpg" alt="第4ページ"></div>
+        <div class="text-area">
+            <h2>神さまは満たしてくださる</h2>
+            <p class="storybook-text">食べ物が 少ししか なくても、<br>イエスさまは まず<br>「神さま、ありがとう」と<br>感謝しました。<br><br>すると、不思議なことに<br>みんなが お腹いっぱい<br>食べることが できたのです。<br><br>「足りないよ」と 心配する前に<br>イエスさまのように<br>まず 感謝して 祈ってみよう。<br><br>『イエスは パンを取り、<br>感謝の 祈りを 唱えてから、<br>分け与えられた。』<br>（ヨハネ 6:11）</p>
+        </div>
+    </section>
+
+    <!-- 第5ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon6.jpg" alt="第5ページ"></div>
+        <div class="text-area">
+            <h2>嵐を静める</h2>
+            <p class="storybook-text">大きな 嵐で 船が 揺れても、<br>イエスさまは 怖がりません。<br>風に向かって 「静まれ！」と<br>言うと 波は 止まりました。<br><br>嵐を 静める 力を 持っている<br>イエスさまが、あなたの 船に<br>一緒に 乗って 守っているよ。<br><br>『なぜ 怖がるのか。<br>信仰の 薄い 者たちよ。』<br>（マタイ 8:26）</p>
+        </div>
+    </section>
+
+    <!-- 第6ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon7.jpg" alt="第6ページ"></div>
+        <div class="text-area">
+            <h2>子供たちを祝福する</h2>
+            <p class="storybook-text">イエスさまは 子どもたちが<br>大好きでした。<br>一人ひとりを 抱きしめて<br>「みんな、神さまの<br>大切な 宝物だよ」と<br>教えてくれました。<br><br>周りの お友達に<br>「大切だよ」という 気持ちを<br>言葉にして 伝えてみてね。<br><br>『子供たちを わたしの<br>ところへ 来させなさい。<br>妨げては ならない。』<br>（マルコ 10:14）</p>
+        </div>
+    </section>
+
+    <!-- 第7ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon8.jpg" alt="第7ページ"></div>
+        <div class="text-area">
+            <h2>足を洗う</h2>
+            <p class="storybook-text">イエスさまは リーダーなのに<br>お弟子さんたちの<br>汚れた 足を 洗いました。<br><br>「大切なのは 威張ることでは<br>なく、互いに互いを自分よりすごい<br>人だと思い合うことですよ」<br>と 教えてくれた のです。<br><br>『わたしが あなたがたに<br>したとおりに、あなたがたも<br>するようにと お手本を<br>示したのである。』<br>（ヨハネ 13:15）</p>
+        </div>
+    </section>
+
+    <!-- 第8ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon9.jpg" alt="第8ページ"></div>
+        <div class="text-area">
+            <h2>嫌なことをされても許す</h2>
+            <p class="storybook-text">イエスさまは、自分を<br>いじめた 人たちの ために<br>「彼らを 許してください」と<br>心から大きな声で祈りました。<br><br>憎むのではなく、許すことが<br>本当の 強さだと<br>教えてくれたのです。<br><br>『父よ、彼らを お赦し<br>ください。自分が 何を<br>しているのか 知らない<br>のです。』<br>（ルカ 23:34）</p>
+        </div>
+    </section>
+
+    <!-- 第9ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon10.jpg" alt="第9ページ"></div>
+        <div class="text-area">
+            <h2>互いに愛し合いなさい</h2>
+            <p class="storybook-text">イエスさまは 言いました。<br>「わたしが 愛したように、<br>みんなも お互いを 大切に、<br>愛し合いなさい」<br><br>イエスさまからもらった<br>大きな 愛を、あなたも<br>周りの 人に 分けてあげよう。<br><br>『わたしが あなたがたを<br>愛したように、あなたがたも<br>互いに 愛し合いなさい。』<br>（ヨハネ 13:34）</p>
+        </div>
+    </section>
+
+    <!-- 第10ページ -->
+    <section class="page">
+        <div class="image-area"><img src="ehonn/otehon11.jpg" alt="第10ページ"></div>
+        <div class="text-area">
+            <h2>最高のプレゼント</h2>
+            <p class="storybook-text">悲しい お別れから 3日目、<br>イエスさまは 生き返りました！<br>「私は いつも そばにいるよ」<br>と 希望を くれました。<br><br>イエスさまは 今も<br>あなたの すぐ そばに<br>いるよ。一緒に 明るい<br>明日へ 歩いていこう！<br><br>『わたしは 復活であり、<br>命である。わたしを 信じる<br>者は、死んでも 生きる。』<br>（ヨハネ 11:25）<br>おしまい</p>
+        </div>
+    </section>
+</main>
+
+<nav class="controls">
+    <button id="prevBtn" class="btn-leaf">まえへ</button>
+    <button id="nextBtn" class="btn-leaf next">つぎへ ✨</button>
+</nav>
+
+<!-- 左下：目次へ（癒やしのグリーン） -->
+<a href="ehon.html" class="magic-nav nav-left">
+    <span style="font-size: 24px;">📖</span>
+    <span>えほん目次</span>
+</a>
+
+<!-- 右下：ホームへ（幸せピンク） -->
+<a href="index.html" class="magic-nav nav-right">
+    <span style="font-size: 22px;">🏠</span>
+    <span>ホームへ</span>
+</a>
+
+<script>
+    const pages = document.querySelectorAll('.page');
+    let currentIndex = 0;
+
+    function updatePage(index) {
+        pages.forEach((p, i) => p.classList.toggle('active', i === index));
+        window.scrollTo(0, 0);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        if (currentIndex < pages.length - 1) {
+            currentIndex++;
+            updatePage(currentIndex);
+        }
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updatePage(currentIndex);
+        }
+    });
+</script>
+
+<footer style="padding: 40px 0; text-align: center; color: #888; font-size: 13px;">
+    <p>&copy; 2026 Designed by 星里 <br>〜 楽しく学ぼうバイブルランド 〜</p>
+</footer>
+
+</body>
+</html>

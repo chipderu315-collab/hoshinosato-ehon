@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ほしのさと せいしょものがたり</title>
+    <link rel="stylesheet" href="ehon.css">
+</head>
+<body>
+<main class="ehon-viewer">
+    <section class="page active">
+        <div class="image-area">
+            <img src="ehonn/daiku1.jpg" alt="てんごく の ようす">
+        </div>
+        <div class="text-area">
+            <h2>天国でのイエスさま</h2>
+            <p class="storybook-text">
+                みんなが ぐっすり 　　　　　<br>
+                ねむる ころ、おそらの 　　　<br>
+                うえでは トントン カンカン。 <br>
+                だれかが おしごとを 　　　　<br>
+                しているよ。 　　　　　　　<br>
+                <br>
+                それは、だいすきな 　　　　<br>
+                イエスさまのお手伝いをする天使。<br>
+                イエスさまは、あなたが 　　<br>
+                ねむっている あいだも、 　　<br>
+                やすまずに お祈りして 　　　<br>
+                くれているんだよ。 　　　　<br>
+                <br>
+                『イスラエルを まもる かたは　<br>
+                まどろむことも なく、 　　　<br>
+                ねむることも ない。』 　　　<br>
+                （詩編 121:4）
+            </p>
+        </div>
+    </section>
+
+    <section class="page">
+        <div class="image-area">
+            <img src="ehonn/daiku2.jpg" alt="てんごく の だいくさん">
+        </div>
+        <div class="text-area">
+            <h2>てんごくの大工さん</h2>
+            <p class="storybook-text">
+                イエスさまに、この子は 　　<br>
+                 えをかくのがすきだからがくぶちを<br>
+                よういしてあげて。 　<br>
+                <br>
+                そういわれたので とんとんかんかん！<br>
+                てんし は たのしく つくっています。<br>
+                イエスさまが まかせてくれた!<br>
+                がんばるぞ！ そういって<br>
+                <br>
+                あなたのために さいこうの 　<br>
+                おうちを つくろうと、 　　　<br>
+                ひとつひとつ ていねいに 　　<br>
+                つくってくれているよ。 　　<br>
+                <br>
+               
+            </p>
+        </div>
+    </section>
+
+    <section class="page">
+        <div class="image-area">
+            <img src="ehonn/daiku3.jpg" alt="あなただけ の おうち">
+        </div>
+        <div class="text-area">
+            <h2>あなただけのおうち</h2>
+            <p class="storybook-text">
+                「この まどからは、きれいな <br>
+                にじが みえるようにしよう」 <br>
+                「おにわには、だいすきな 　<br>
+                おはなを いっぱい さかせよう」<br>
+                <br>
+                てんしが つくる おうちは 　<br>
+                とっても じょうぶで、 　　　<br>
+                せかいで いちばん 　　　　　<br>
+                あんしんできる ばしょなんだ。 　<br>
+                <br>
+                『わたしの ちちの いえには 　<br>
+                すまいが たくさん ある。 　　<br>
+                あなたがたのために ばしょを 　<br>
+                よういしに いくのだ。』 　　　<br>
+                （ヨハネ 14:2）
+            </p>
+        </div>
+    </section>
+
+  
+    <section class="page">
+  
+    <div class="text-area">
+        <h2>あとがき</h2>
+        <p class="storybook-text">
+            イエスさまが てんしに言って<br>
+            よういしてくれている おうちは、<br>
+            いつか あなたが 　　　　　　<br>
+            かえる ばしょ。 　　　　　　<br>
+            <br>
+            そこには なみだも いたみも 　<br>
+            なくて、キラキラした 　　　<br>
+            ひかりが あふれているよ。 　<br>
+            <br>
+            だから 安心して、ゆっくり 　<br>
+            おやすみなさい。 　　　　　<br>
+            あなたは、せかいで いちばん 　<br>
+            たいせつに おもわれている 　　<br>
+            人なのですから。 　　　　　<br>
+            <br>
+            <span class="prayer-text">
+            イエスさまのおなまえを 　　　<br>
+            とおして、おいのりします。 　<br>
+            アーメン。
+            </span>
+        </p>
+    </div>
+</section>
+</main>
+
+  
+
+<!-- ナビゲーション操作エリア -->
+<nav class="controls" style="
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px; 
+    margin: 40px 0 100px 0; /* 下に余白を作ってボタン被りを防ぐ */
+    padding: 0 10px;
+">
+    <button id="prevBtn" class="btn" style="min-width: 80px; padding: 10px; cursor: pointer;">まえへ</button>
+    <div id="pageDots" class="dots" style="display: flex; gap: 8px;"></div>
+    <button id="nextBtn" class="btn" style="min-width: 80px; padding: 10px; cursor: pointer;">つぎへ</button>
+</nav>
+<!-- 固定ナビゲーション：左右に配置してホスピタリティを形に -->
+<style>
+    /* 共通のデザイン（リリアーネ風の丸みと影） */
+    .magic-nav {
+        position: fixed;
+        bottom: 30px; /* スマホの操作バーに被らない高さ */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        background: #ffffff;
+        border-radius: 50%;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 10px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        z-index: 9999;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-family: 'Hiragino Maru Gothic ProN', 'Meiryo', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 左下：えほん目次へ（癒やしのグリーン） */
+    .nav-left {
+        left: 20px;
+        border: 4px double #7fb07f;
+        color: #7fb07f;
+    }
+
+    /* 右下：トップへ（幸せピンク） */
+    .nav-right {
+        right: 20px;
+        border: 4px double #ffb7c5;
+        color: #d88a8a;
+    }
+
+    /* 動きの演出（ホバー＆タップ） */
+    .magic-nav:hover {
+        transform: translateY(-8px) scale(1.1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .magic-nav:active {
+        transform: scale(0.9);
+    }
+
+    /* スマホでの表示調整 */
+    @media screen and (max-width: 480px) {
+        .magic-nav {
+            width: 68px;
+            height: 68px;
+            bottom: 25px;
+        }
+        .nav-left { left: 15px; }
+        .nav-right { right: 15px; }
+    }
+</style>
+
+<!-- 左下：えほんライブラリー（目次）へ -->
+<a href="ehon.html" class="magic-nav nav-left">
+    <span style="font-size: 24px; margin-bottom: -2px;">📖</span>
+    <span>えほん目次</span>
+</a>
+
+<!-- 右下：ホーム（サイト全体）へ -->
+<a href="../index.html" class="magic-nav nav-right">
+    <span style="font-size: 22px; margin-bottom: -2px;">🏠</span>
+    <span>ホームへ</span>
+</a>
+    
+
+    <script>
+        const btn = document.getElementById('backToTopBtn');
+        
+        // PC用：マウスオーバー
+        btn.onmouseover = function() {
+            this.style.transform = 'scale(1.1) rotate(5deg)';
+            this.style.background = '#ffffff';
+        };
+        btn.onmouseout = function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+            this.style.background = '#fff9e6';
+        };
+
+        // スマホ用：ポヨヨンとした動き
+        btn.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.9)';
+        });
+        btn.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</div>
+
+<style>
+    /* 画面が狭いスマホ用の最終調整 */
+    @media screen and (max-width: 480px) {
+        .controls {
+            margin-bottom: 120px !important; /* 戻るボタンと被らないようにもっと隙間をあける */
+        }
+        #backToTopBtn {
+            width: 65px !important; /* スマホでは邪魔にならないサイズに */
+            height: 65px !important;
+            bottom: 15px !important;
+            right: 15px !important;
+        }
+    }
+</style>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Designed by hosinosato / 楽しく学ぼうバイブルランド</p>
+    </footer>
+
+    <script src="ehon.js"></script>
+</body>
+</html>
